@@ -8,7 +8,7 @@ import { getAllPokemonController } from "./controllers/getAllPokemonController";
 import swaggerConfig from './swagger-config';
 
 const app = express()
-const PORT = 5000
+const PORT = Number(process.env.PORT) || 5000
 export const pool = new Pool({
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
