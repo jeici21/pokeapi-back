@@ -25,7 +25,7 @@ app.get("/", getAllPokemonController)
 
 pool.connect().then(async () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
-    app.listen(PORT);
+    app.listen(PORT, '0.0.0.0');
     await createTypeTable()
     await createPokemonTable();
 });
